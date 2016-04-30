@@ -1,0 +1,18 @@
+<header >TODO List</header>
+
+<div class='form'>
+    <input type='text' id='todoTitle' class='inputs' ng-model='viewTitle'>
+    <i class="fa fa-check-square fa-5x" ng-click='createList()'></i>
+
+</div>
+
+<br><br>
+
+<ul class='lists'>
+    <li ng-repeat='(key, value) in lists'>
+
+        <span id="spand" class='item clickable' ng-click='gotoList(key)'> {{ key }}</span>
+
+        <button  ng-click='deleteList(key)'>x</button>
+    </li>
+</ul>
